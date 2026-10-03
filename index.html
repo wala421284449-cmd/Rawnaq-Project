@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="htmlRoot">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر رونق - Rawnaq | عالم المرأة والأناقة الشامل</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <body>
+        <!-- 1. شريط إعلاني متحرك وجذاب -->
+        <div class="top-ticker">
+            <div class="ticker-content">
+                🔥 عرض لفترة محدودة: خصم 20% على طلبكِ الأول بكود <b>RAWNAQ20</b> + توصيل سريع ومجاني للطلبات فوق 200
+                شيكل! 🛍️✨
+            </div>
+        </div>
+
+        <!-- 2. الهيدر الفاخر -->
+        <nav class="navbar navbar-expand-lg luxury-navbar sticky-top">
+            <div class="container">
+                <!-- الشعار المطابق تماماً للصورة المطلوبة -->
+                <a href="#" class="brand-logo">
+                    <span class="logo-ar">رَونـَـق</span>
+                    <span class="logo-en">RAWNAQ</span>
+                </a>
+
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#luxuryNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="luxuryNav">
+                    <ul class="navbar-nav gap-3 mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="{{ url('/') }}">الرئيسية</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#categories">الأزياء النسائية</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#products">أروقة المتاجر</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#categories">الإكسسوارات والعطور</a></li>
+                    </ul>
+                </div>
+
+                <div class="d-flex align-items-center gap-2">
+                    <button class="btn btn-sm btn-outline-secondary rounded-pill px-2 py-1" id="langToggle"
+                        style="font-size: 12px;">En</button>
+                    <button class="btn btn-sm btn-outline-secondary rounded-circle" id="themeToggle" title="تغيير الوضع"
+                        style="width: 32px; height: 32px;">🌙</button>
+
+                    <a href="#" class="text-dark fs-5 text-decoration-none ms-1" title="سلة الشراء">
+                        🛒 <span class="badge rounded-pill"
+                            style="background-color: var(--rawnaq-rose); font-size: 8px;">0</span>
+                    </a>
+
+                    <a href="{{ route('login') }}" class="btn btn-luxury-outline px-3 py-1 ms-2"
+                        style="font-size: 13px;">تسجيل الدخول</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 3. القسم الرئيسي Hero Section -->
+        <section class="hero-fullscreen">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col-lg-6 text-end mb-5 mb-lg-0">
+                        <span class="badge-luxury mb-3">✨ منصة المتاجر النسائية المتكاملة</span>
+                        <h1 class="hero-title mb-4">
+                            تألقي بذوقكِ الخاص مع متاجر وتشكيلات <span style="color: var(--rawnaq-rose);">رونق</span>
+                        </h1>
+                        <p class="text-muted mb-4 fs-6" style="line-height: 1.9; max-width: 530px;">
+                            تجمع منصتنا نخبة من أرقى المتاجر النسائية المتخصصة في الأزياء بشتى أذواقها، المجوهرات
+                            الحصرية، والعطور الساحرة لتجدي ما يطابق هويتكِ الفريدة.
+                        </p>
+
+                        <div class="d-flex gap-3 justify-content-start flex-wrap">
+                            <a href="#categories" class="btn btn-luxury">استكشفي المتاجر 🛍️</a>
+                            <a href="{{ route('login') }}" class="btn btn-luxury-outline">انضمي كبائع</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 text-center">
+                        <div class="hero-img-container">
+                            <img src="asset/hero.png" alt="منصة رونق للمتاجر النسائية">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. أقسام المتاجر الفاخرة -->
+        <section id="categories" class="py-5" style="background-color: var(--card-bg);">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <span class="badge-luxury mb-2">أقسام المنصة</span>
+                    <h2 class="display-6 fw-bold">تفرعات الأناقة والجمال في رونق</h2>
+                    <p class="text-muted mt-2">اختاري القسم وابدئي تصفح المتاجر المستقلة ضمن تخصصكِ المفضل</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <a href="#" class="category-luxury-card">
+                            <img src="asset/Screenshot 2026-10-03 210019.png"
+                                alt="الأزياء النسائية">
+                            <div class="category-overlay">
+                                <h3 class="cat-title">متاجر الأزياء النسائية</h3>
+                                <p class="cat-desc">تضم دور أزياء متعددة تقدم فساتين سهرة، ملابس كاجوال، وأزياء تناسب
+                                    كافة الأذواق.</p>
+                                <span class="cat-btn">تصفح متاجر الأزياء 👗</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#" class="category-luxury-card">
+                            <img src="asset/Screenshot 2026-10-03 210033.png"
+                                alt="الإكسسوارات والمجوهرات">
+                            <div class="category-overlay">
+                                <h3 class="cat-title">متاجر الإكسسوارات</h3>
+                                <p class="cat-desc">بوتيكات متخصصة في الحقائب الفاخرة، الأحذية، والمجوهرات الحصرية
+                                    البراقة.</p>
+                                <span class="cat-btn">تصفح متاجر المجوهرات 💍</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#" class="category-luxury-card">
+                            <img src="asset/Screenshot 2026-10-03 210042.png"
+                                alt="العطور والتجميل">
+                            <div class="category-overlay">
+                                <h3 class="cat-title">متاجر العطور والتجميل</h3>
+                                <p class="cat-desc">وكلاء ومتاجر عطور أصلية ومستحضرات تجميل عالمية تضمن لكِ حضوراً لا
+                                    ينسى.</p>
+                                <span class="cat-btn">تصفح متاجر الجمال ✨</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. قسم أروقة المتاجر وتشكيلات الذوق الرفيع (البطاقات المبهرة المطورة) -->
+        <section id="products" class="py-5" style="background-color: var(--rawnaq-bg);">
+            <div class="container py-4">
+                <div class="text-center mb-4">
+                    <span class="badge-luxury mb-2">أروقة المتاجر والتشكيلات الحصرية</span>
+                    <h2 class="display-6 fw-bold">اختيارات تليق بمختلف الأذواق</h2>
+                    <p class="text-muted mt-2">تسوقي أحدث تصاميم المتاجر المعروضة بعناية لتناسب كل سيدة تبحث عن التميز
+                    </p>
+                </div>
+
+                <!-- أزرار فلترة الأذواق والمتاجر -->
+                <div class="store-filter-tabs">
+                    <button class="filter-tab active">جميع المتاجر</button>
+                    <button class="filter-tab">👗 أزياء السهرة (متجر إيليزا)</button>
+                    <button class="filter-tab">✨ العطور الحصرية (دار أوركيد)</button>
+                    <button class="filter-tab">👜 الحقائب والأناقة (بوتيك لارين)</button>
+                    <button class="filter-tab">💍 المجوهرات الفاخرة (لايت)</button>
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- المنتج الأول -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="product-luxury-card">
+                            <span class="store-badge">🏪 متجر إيليزا</span>
+                            <div class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=800&auto=format&fit=crop"
+                                    alt="فستان سهرة ملكي">
+                                <span class="discount-badge">خصم 20%</span>
+                            </div>
+                            <div class="product-content">
+                                <div class="color-options mb-2">
+                                    <span class="color-dot active" style="background-color: #a25c6f;"
+                                        title="روزي"></span>
+                                    <span class="color-dot" style="background-color: #2c2c2c;" title="أسود"></span>
+                                    <span class="color-dot" style="background-color: #dfc1b5;" title="بيج"></span>
+                                </div>
+                                <span class="product-cat-sub">أزياء راقية • ذوق ملكي</span>
+                                <h5 class="product-name">فستان سهرة مطرز فاخر بتصميم عصري</h5>
+                                <div class="d-flex align-items-center justify-content-between my-2">
+                                    <div class="rating-stars" style="font-size: 0.8rem;">
+                                        ⭐ <span class="fw-bold text-dark">4.8</span> <span class="text-muted">(991
+                                            تقييم)</span>
+                                    </div>
+                                    <span class="text-muted" style="font-size: 0.72rem;">تم شراء +100 هذا الشهر</span>
+                                </div>
+                                <div class="pricing-box mb-3">
+                                    <span class="current-price">220 شيكل</span>
+                                    <span class="old-price">280 شيكل</span>
+                                </div>
+                                <a href="#" class="btn-add-cart">أضف إلى السلة 🛒</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- المنتج الثاني -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="product-luxury-card">
+                            <span class="store-badge">🏪 بوتيك لارين</span>
+                            <div class="product-img-wrapper">
+                                <img src="asset/Screenshot 2026-10-03 210348.png"
+                                    alt="حقيبة يد فاخرة">
+                                <span class="discount-badge">الأكثر طلباً</span>
+                            </div>
+                            <div class="product-content">
+                                <div class="color-options mb-2">
+                                    <span class="color-dot active" style="background-color: #8c2d3b;"
+                                        title="أحمر داكن"></span>
+                                    <span class="color-dot" style="background-color: #2c2c2c;" title="أسود"></span>
+                                </div>
+                                <span class="product-cat-sub">إكسسوارات • جلد طبيعي</span>
+                                <h5 class="product-name">حقيبة يد كلاسيكية راقية بتصميم فرنسي</h5>
+                                <div class="d-flex align-items-center justify-content-between my-2">
+                                    <div class="rating-stars" style="font-size: 0.8rem;">
+                                        ⭐ <span class="fw-bold text-dark">4.9</span> <span class="text-muted">(640
+                                            تقييم)</span>
+                                    </div>
+                                    <span class="text-muted" style="font-size: 0.72rem;">تم شراء +150 هذا الشهر</span>
+                                </div>
+                                <div class="pricing-box mb-3">
+                                    <span class="current-price">140 شيكل</span>
+                                    <span class="old-price">180 شيكل</span>
+                                </div>
+                                <a href="#" class="btn-add-cart">أضف إلى السلة 🛒</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- المنتج الثالث -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="product-luxury-card">
+                            <span class="store-badge">🏪 دار أوركيد</span>
+                            <div class="product-img-wrapper">
+                                <img src="asset/Screenshot 2026-10-03 210357.png"
+                                    alt="عطر فخم">
+                            </div>
+                            <div class="product-content">
+                                <div class="color-options mb-2">
+                                    <span class="color-dot active" style="background-color: #1b365d;"
+                                        title="أزرق ملكي"></span>
+                                </div>
+                                <span class="product-cat-sub">عطور شرقية • مركزة</span>
+                                <h5 class="product-name">عطر رونق الملكي الفاخر بحجم 100مل</h5>
+                                <div class="d-flex align-items-center justify-content-between my-2">
+                                    <div class="rating-stars" style="font-size: 0.8rem;">
+                                        ⭐ <span class="fw-bold text-dark">4.7</span> <span class="text-muted">(420
+                                            تقييم)</span>
+                                    </div>
+                                    <span class="text-muted" style="font-size: 0.72rem;">تم شراء +80 هذا الشهر</span>
+                                </div>
+                                <div class="pricing-box mb-3">
+                                    <span class="current-price">180 شيكل</span>
+                                    <span class="old-price">220 شيكل</span>
+                                </div>
+                                <a href="#" class="btn-add-cart">أضف إلى السلة 🛒</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- المنتج الرابع -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="product-luxury-card">
+                            <span class="store-badge">🏪 متجر لايت</span>
+                            <div class="product-img-wrapper">
+                                <img src="asset/Screenshot 2026-10-03 210033.png"
+                                    alt="طقم مجوهرات">
+                                <span class="discount-badge">جديد</span>
+                            </div>
+                            <div class="product-content">
+                                <div class="color-options mb-2">
+                                    <span class="color-dot active" style="background-color: #e5c158;"
+                                        title="ذهبي"></span>
+                                    <span class="color-dot" style="background-color: #d1d1d1;" title="فضي"></span>
+                                </div>
+                                <span class="product-cat-sub">مجوهرات • تصميم حصري</span>
+                                <h5 class="product-name">طقم لؤلؤ مرصع بالكريستال الخالص</h5>
+                                <div class="d-flex align-items-center justify-content-between my-2">
+                                    <div class="rating-stars" style="font-size: 0.8rem;">
+                                        ⭐ <span class="fw-bold text-dark">5.0</span> <span class="text-muted">(310
+                                            تقييم)</span>
+                                    </div>
+                                    <span class="text-muted" style="font-size: 0.72rem;">تم شراء +90 هذا الشهر</span>
+                                </div>
+                                <div class="pricing-box mb-3">
+                                    <span class="current-price">250 شيكل</span>
+                                    <span class="old-price">300 شيكل</span>
+                                </div>
+                                <a href="#" class="btn-add-cart">أضف إلى السلة 🛒</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. شريط ميزات المتجر (Features Section) -->
+        <section class="features-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 feature-box">
+                        <div class="feature-icon">🚚</div>
+                        <h5 class="feature-title">توصيل سريع ومضمون</h5>
+                        <p class="feature-desc">شحن لجميع المناطق وبأقصى سرعة حتى باب منزلكِ.</p>
+                    </div>
+                    <div class="col-md-4 feature-box">
+                        <div class="feature-icon">💎</div>
+                        <h5 class="feature-title">جودة أصلية 100%</h5>
+                        <p class="feature-desc">نختار لكِ أرقى الماركات والتشكيلات العالمية المضمونة.</p>
+                    </div>
+                    <div class="col-md-4 feature-box">
+                        <div class="feature-icon">🔒</div>
+                        <h5 class="feature-title">تسوق آمن ودفع سهل</h5>
+                        <p class="feature-desc">خيارات دفع متعددة ومحمية بالكامل لراحة بالكِ.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. قسم آراء العملاء (Testimonials) -->
+        <section class="py-5" style="background-color: var(--card-bg);">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <span class="badge-luxury mb-2">ثقة عميلاتنا</span>
+                    <h2 class="display-6 fw-bold">ماذا تقول سيدات رونق عنا؟</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="text-muted mb-3" style="line-height: 1.8;">"المتجر يضم متاجر منوعة وراقية،
+                                والتوصيل كان سريع، الفستان طلع أجمل بكثير! شكراً رونق ❤️"</p>
+                            <h6 class="fw-bold mb-0" style="color: var(--rawnaq-rose);">سارة أحمد</h6>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="text-muted mb-3" style="line-height: 1.8;">"طلبت العطر من دار أوركيد عبر المنصة،
+                                الجودة فاخرة جداً والتغليف راقي كأنها هدية فخمة."</p>
+                            <h6 class="fw-bold mb-0" style="color: var(--rawnaq-rose);">نور محمد</h6>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="text-muted mb-3" style="line-height: 1.8;">"أفضل منصة نسائية تعاملت معها، تنوع
+                                المتاجر يتيح لكِ اختيار الذوق الذي يناسبكِ تماماً."</p>
+                            <h6 class="fw-bold mb-0" style="color: var(--rawnaq-rose);">دما محمود</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- الفوتر الاحترافي والراقي (عادي ليس سيكشن كامل) -->
+        <!-- الفوتر الاحترافي والراقي المنسق بدقة للغة العربية -->
+        <!-- الفوتر الاحترافي والراقي المرتّب للغة العربية -->
+        <footer class="luxury-footer py-4">
+            <div class="container">
+                <div class="row g-4 justify-content-between text-end">
+
+                    <!-- العمود الأول: الشعار ونشرة البريد (أقصى اليمين) -->
+                    <div class="col-lg-4">
+                        <div class="footer-brand-box mb-2">
+                            <span class="brand-arabic" style="font-size: 1.6rem;">رونق</span>
+                            <span class="brand-english" style="font-size: 0.5rem; display: block;">RAWNAQ</span>
+                        </div>
+                        <p class="text-muted small mb-3" style="line-height: 1.7; font-size: 0.8rem;">
+                            منصتكِ الأولى لكل ما تحتاجه المرأة العصرية من أزياء، مجوهرات، عطور ومستحضرات تجميل أصلية
+                            لتكوني متألقة في كل لحظة.
+                        </p>
+                        <div class="newsletter-box">
+                            <input type="email" class="newsletter-input" placeholder="أدخلِ بريدكِ الإلكتروني...">
+                            <button class="newsletter-btn">انضمي</button>
+                        </div>
+                    </div>
+
+                    <!-- العمود الثاني: أقسام المتجر -->
+                    <div class="col-lg-2 col-md-4">
+                        <h6 class="fw-bold mb-3 pb-1 border-bottom border-light"
+                            style="color: var(--rawnaq-rose); font-size: 0.9rem;">أقسام المتجر</h6>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="#hero">الرئيسية</a></li>
+                            <li><a href="#categories">الأزياء النسائية</a></li>
+                            <li><a href="#categories">المجوهرات والإكسسوارات</a></li>
+                            <li><a href="#categories">العطور والتجميل</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- العمود الثالث: خدمة العملاء -->
+                    <div class="col-lg-2 col-md-4">
+                        <h6 class="fw-bold mb-3 pb-1 border-bottom border-light"
+                            style="color: var(--rawnaq-rose); font-size: 0.9rem;">خدمة العملاء</h6>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="{{ route('login') }}">تسجيل الدخول</a></li>
+                            <li><a href="#">سلة الشراء</a></li>
+                            <li><a href="#">تتبع الطلبات</a></li>
+                            <li><a href="#">سياسة الإرجاع</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- العمود الرابع: التواصل الاجتماعي وطرق الدفع (أقصى اليسار) -->
+                    <div class="col-lg-3 col-md-4">
+                        <h6 class="fw-bold mb-3 pb-1 border-bottom border-light"
+                            style="color: var(--rawnaq-rose); font-size: 0.9rem;">تواصل والدفع الآمن</h6>
+                        <p class="text-muted small mb-2" style="font-size: 0.78rem;">تابعِ أحدث صيحات الموضة:</p>
+                        <div class="social-icons d-flex gap-2 mb-3 justify-content-start">
+                            <a href="#" class="social-btn" title="تيك توك">📱</a>
+                            <a href="#" class="social-btn" title="انستغرام">📸</a>
+                            <a href="#" class="social-btn" title="واتساب">💬</a>
+                            <a href="#" class="social-btn" title="بينترست">📌</a>
+                        </div>
+                        <div class="payment-methods mt-2">
+                            <span class="text-muted d-block mb-1" style="font-size: 0.72rem;">طرق الدفع المعتمدة:</span>
+                            <div class="d-flex gap-1 flex-wrap">
+                                <span class="badge bg-white text-dark border px-2 py-1"
+                                    style="font-size: 0.62rem;">Apple Pay</span>
+                                <span class="badge bg-white text-dark border px-2 py-1"
+                                    style="font-size: 0.62rem;">Visa</span>
+                                <span class="badge bg-white text-dark border px-2 py-1"
+                                    style="font-size: 0.62rem;">Mastercard</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr class="my-3" style="border-color: rgba(162,92,111,0.15);">
+
+                <!-- حقوق النشر -->
+                <div class="row align-items-center">
+                    <div class="col-md-12 text-center text-muted small" style="font-size: 0.75rem;">
+                        © 2026 متجر <strong>رونق</strong> (RAWNAQ). جميع الحقوق محفوظة. صُمم بحب لأناقة المرأة العصرية.
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- ملف الـ JS الخارجي -->
+        <script src="script.js"></script>
+    </body>
+
+</html>
